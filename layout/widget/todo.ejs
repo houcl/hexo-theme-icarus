@@ -1,0 +1,63 @@
+
+<% const weekdayArr= new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+const monthArr = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+const myDate = new Date(); 
+const dayofweek = weekdayArr[myDate.getDay()], day = myDate.getDate(), month = monthArr[myDate.getMonth()]; %>
+<% const tasks = get_config_from_obj(widget, 'tasks');
+let doneNum = 0, taskNum = 0;
+for(const i in tasks) {
+    taskNum++;
+    if(tasks[i].hasOwnProperty('done') && tasks[i].done === true) doneNum++;
+}
+%>
+
+
+<div class="card widget todo-wrapper">
+    <div class="todo-header">
+        <time class="clearfix">
+            <span class="day"><%= day %></span>
+            <span class="dayofweek"><%= dayofweek %></span>
+            <span class="month"><%= month %></span>
+        </time>
+    </div>
+    <div class="add-circle">
+
+        <div class="todo-content">
+            <div class="todo-content-title">
+                <h2>本周 tasks</h2>
+                <p class="task-report">
+                    <span class="task-remain">
+                        <%= doneNum %></span> / <%= taskNum %> task
+                </p>
+            </div>
+            <ul class="todo-list">
+                <% for (const i in tasks) { %>
+                    <% const hasDone = tasks[i].hasOwnProperty('done') && tasks[i].done; %>
+                    <li class="task-item <%= hasDone ? 'task-done' : '' %>">
+                    <span class="label <%= tasks[i].hasOwnProperty('type') && tasks[i].type ? 'urgent' : 'normal' %>"></span>
+                    <% if (hasDone) { %>
+                        <del class="text"><%= i %></del>
+                    <% } else { %>
+                        <script>
+                            function openUrl(url){
+                                window.open(url)
+                            }
+                        </script>
+                        <% const url = tasks[i].url; %>
+                        <!-- <p class="text" onclick="<%= 'window.open(\'url\')' %>"><%= i %></p> -->
+                        <p class="text" onclick="openUrl('<%= url%>')"><%= i %></p>
+                        <!-- <p class="text" onclick="${openUrl()}"><%= i %></p> -->
+                        <!-- <div class="task-action">
+                            <i class="more"></i>
+                            <ul class="action-list">
+                                <li>Mark done</li>
+                                <li>Edit</li>
+                                <li>Delete</li>
+                            </ul>
+                        </div> -->
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
