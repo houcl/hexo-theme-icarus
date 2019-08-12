@@ -168,11 +168,11 @@ widgets:
             线上四节课程学习:
                 done: false # 默认为false，即未完成
                 type: 0 # 0代表normal 1代表urgent 默认为0，即normal
-                url: /2019/08/05/week_6_share/
-            作业：第六周线上课学习作业:
-                done: false
-                type: 0
-                url: /2019/08/05/week_6_plan/
+                url: /2019/08/12/week_7_share/
+            # 作业：第七周线上课学习作业:
+            #     done: false
+            #     type: 0
+            #     url: /2019/08/05/week_6_plan/
             # 线下活动日：分享日&训练日:
             #     done: true
             #     type: 1
