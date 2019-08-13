@@ -169,14 +169,14 @@ widgets:
                 done: false # 默认为false，即未完成
                 type: 0 # 0代表normal 1代表urgent 默认为0，即normal
                 url: /2019/08/12/week_7_share/
-            # 作业：第七周线上课学习作业:
-            #     done: false
-            #     type: 0
-            #     url: /2019/08/05/week_6_plan/
-            # 线下活动日：分享日&训练日:
-            #     done: true
-            #     type: 1
-            #     url: /2019/07/31/week_5_off_line
+            作业：第七周线上课学习作业:
+                done: false
+                type: 0
+                url: /2019/08/13/week_7_plan/
+            线下活动日：案例日打磨&分享:
+                done: false
+                type: 0
+                url: /2019/08/14/week_7_off_line
             # 线下活动：小程序报名+线下签到:
             #     done: true
             #     type: 1
