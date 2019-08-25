@@ -170,16 +170,16 @@ widgets:
                 type: 1 # 0代表normal 1代表urgent 默认为0，即normal
                 url: /2019/08/19/week_8_share/
             作业：第八周线上课学习作业:
-                done: false
-                type: 0
+                done: true
+                type: 1
                 url: /2019/08/19/week_8_plan/
             线下活动日：分享日:
-                done: false
-                type: 0
+                done: true
+                type: 1
                 url: /2019/08/22/week_8_off_line
             # 线下活动：小程序报名+线下签到:
-            #     done: true
-            #     type: 1
+            #     done: false
+            #     type: 0
             #     url: /2019/07/31/week_5_off_line
     # -
     #     # Widget name
