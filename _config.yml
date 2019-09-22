@@ -165,10 +165,10 @@ widgets:
         type: todo # 待办事项
         position: right
         tasks:
-            线上四节课程学习:
+            下山啦，要坚持学习啊:
                 done: false # 默认为false，即未完成
                 type: 0 # 0代表normal 1代表urgent 默认为0，即normal
-                url: /2019/09/09/week_11_share/
+                url: /posts/908af9fe
             # 作业：第9周线上课学习作业:
             #     done: false
             #     type: 0
